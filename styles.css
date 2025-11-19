@@ -59,6 +59,48 @@ body {
 .nav a:hover { background: #0c008c; }
 .nav a:last-child { border-bottom-right-radius: 28px; }
 
+.menu__toggle {
+  display: none;
+  border: 1px solid rgba(255,255,255,0.4);
+  background: rgba(8,0,108,0.4);
+  color: #fff;
+  font-size: 1.2rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  border-radius: 18px;
+  padding: 10px 18px;
+  gap: 8px;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.menu__toggle-line {
+  width: 26px;
+  height: 2px;
+  background: #fff;
+  display: block;
+  position: relative;
+}
+
+.menu__toggle-line::before,
+.menu__toggle-line::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: inherit;
+}
+
+.menu__toggle-line::before {
+  top: -6px;
+}
+
+.menu__toggle-line::after {
+  top: 6px;
+}
+
 .advantages {
   margin: 40px auto 80px;
   padding: 20px 15px 0 40px;
@@ -554,21 +596,6 @@ body {
   background: #0b0f33;
 }
 
-@media (max-width: 768px) {
-  .order-form__row {
-    flex-direction: column;
-  }
-
-  .contacts__info {
-    flex-direction: column;
-  }
-
-  .floating-buttons {
-    right: 15px;
-    bottom: 15px;
-  }
-}
-
 .contacts .map-widget {
   position: relative !important;
   overflow: hidden !important;
@@ -601,4 +628,231 @@ body {
 
 .contacts .map-widget > a {
   display: none;
+}
+
+@media (max-width: 1200px) {
+  .advantages {
+    gap: 50px;
+  }
+
+  .advantages__visual {
+    flex: 0 0 420px;
+  }
+}
+
+@media (max-width: 992px) {
+  body {
+    padding-top: 150px;
+  }
+
+  .menu {
+    flex-direction: column;
+    height: auto;
+    padding: 12px 16px 20px;
+    border-radius: 0 0 28px 28px;
+    gap: 14px;
+  }
+
+  .logo {
+    flex: unset;
+    width: 100%;
+    border-radius: 20px;
+  }
+
+  .menu__toggle {
+    display: flex;
+  }
+
+  .nav {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border-radius: 20px;
+    background: rgba(8,0,108,0.6);
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.35s ease;
+  }
+
+  .menu.menu--open .nav {
+    max-height: 420px;
+  }
+
+  .nav a {
+    justify-content: flex-start;
+    font-size: 1.1rem;
+    padding: 12px 18px;
+    border-left: none;
+    border-top: 1px solid rgba(103, 181, 255, 0.3);
+  }
+
+  .nav a:first-child {
+    border-top: none;
+  }
+
+  .advantages {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .advantages__visual {
+    flex: unset;
+    width: 100%;
+    justify-content: center;
+    min-height: auto;
+  }
+
+  .advantages__visual img {
+    margin-left: 0;
+    max-height: 380px;
+    max-width: 70%;
+  }
+
+  .advantages__halo {
+    width: 320px;
+    height: 320px;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .advantages__text {
+    max-width: 100%;
+  }
+
+  .advantages__slider {
+    padding-right: 0;
+  }
+
+  .advantages__slider .carousel-control-prev,
+  .advantages__slider .carousel-control-next {
+    display: none;
+  }
+
+  .order__content {
+    padding: 30px 24px;
+  }
+
+  .products__grid {
+    gap: 20px;
+  }
+
+  .price-list {
+    padding: 30px;
+  }
+
+  .review-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .contacts__info {
+    flex-direction: column;
+  }
+
+  .contacts .map-widget {
+    height: 320px;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    padding-top: 130px;
+  }
+
+  .advantages {
+    gap: 30px;
+  }
+
+  .advantages__description {
+    font-size: 1.1rem;
+    line-height: 1.5;
+  }
+
+  .order-form__row {
+    flex-direction: column;
+  }
+
+  .products__title {
+    font-size: 1.6rem;
+  }
+
+  .price-list {
+    padding: 24px;
+  }
+
+  .reviews {
+    padding: 40px 15px 60px;
+  }
+
+  .floating-buttons {
+    right: 15px;
+    bottom: 15px;
+  }
+}
+
+@media (max-width: 576px) {
+  body {
+    padding-top: 120px;
+  }
+
+  .menu {
+    padding: 10px 12px 16px;
+  }
+
+  .menu__toggle {
+    font-size: 1rem;
+    letter-spacing: 2px;
+  }
+
+  .logo svg {
+    width: 110px;
+  }
+
+  .advantages__visual img {
+    max-width: 90%;
+  }
+
+  .advantages__halo {
+    width: 260px;
+    height: 260px;
+  }
+
+  .products {
+    padding-bottom: 20px;
+  }
+
+  .product-card img {
+    height: 180px;
+  }
+
+  .order {
+    padding: 60px 10px;
+  }
+
+  .order__content {
+    padding: 24px 18px;
+  }
+
+  .review-card {
+    padding: 22px;
+  }
+
+  .contacts {
+    padding: 60px 0;
+  }
+
+  .floating-buttons {
+    position: fixed;
+    left: 15px;
+    right: 15px;
+    bottom: 20px;
+  }
+
+  .floating-buttons a {
+    font-size: 0.8rem;
+    padding: 10px;
+  }
 }

@@ -2,6 +2,7 @@
 <html lang="ru">
 <head>
 <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Masterok</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,7 +23,11 @@
         <rect x="46.4" y="9.544" width="15" height="1" fill="#D9D9D9"/>
       </svg>
     </div>
-    <div class="nav">
+    <button class="menu__toggle" type="button" aria-expanded="false" aria-controls="primaryNav">
+      Меню
+      <span class="menu__toggle-line"></span>
+    </button>
+    <div class="nav" id="primaryNav">
       <a href="#">О НАС</a>
       <a href="#">КАТАЛОГ</a>
       <a href="#">КОНТАКТЫ</a>
@@ -36,7 +41,7 @@
         <span></span>
         <span></span>
       </div>
-      <img src="images/master-ok.png" alt="Специалист компании Мастерок" />
+      <img src="images/master-ok.png" alt="Специалист компании Мастерок">
     </div>
     <div class="advantages__text">
       <div id="advantagesCarousel" class="carousel slide advantages__slider" data-bs-ride="carousel">
@@ -87,7 +92,7 @@
     <h2 class="products__title">Наши услуги и товары</h2>
     <div class="products__grid">
       <article class="product-card">
-        <img src="images/service-1.jpg" alt="Монтаж гипсокартона" />
+        <img src="images/service-1.jpg" alt="Монтаж гипсокартона">
         <div class="product-card__body">
           <h3>Монтаж гипсокартона</h3>
           <p>Комплексная обшивка стен и потолков с утеплением и шумоизоляцией в короткие сроки.</p>
@@ -95,7 +100,7 @@
         </div>
       </article>
       <article class="product-card">
-        <img src="images/service-2.jpg" alt="Фасадные панели" />
+        <img src="images/service-2.jpg" alt="Фасадные панели">
         <div class="product-card__body">
           <h3>Фасадные панели</h3>
           <p>Долговечные панели с защитой от влаги и выгорания для частных домов и коммерческих зданий.</p>
@@ -103,7 +108,7 @@
         </div>
       </article>
       <article class="product-card">
-        <img src="images/service-3.jpg" alt="Кровельные работы" />
+        <img src="images/service-3.jpg" alt="Кровельные работы">
         <div class="product-card__body">
           <h3>Кровельные работы</h3>
           <p>Проектирование и монтаж кровли из металлочерепицы и мягких материалов с гарантией.</p>
@@ -188,8 +193,9 @@
       <div class="carousel-inner">
         <div class="carousel-item active">
           <article class="review-card">
-            <img src="images/client-1.jpg" alt="Клиент Анна К." />
+            <img src="images/client-1.jpg" alt="Клиент Анна К.">
             <div>
+              <h3 class="visually-hidden">Отзыв Анны К.</h3>
               <p>«Команда МастерОК полностью обновила фасад нашего дома! Всё сделано в срок, чисто и очень аккуратно.»</p>
               <span class="review-card__meta">Анна К., 12.05.2024</span>
             </div>
@@ -197,8 +203,9 @@
         </div>
         <div class="carousel-item">
           <article class="review-card">
-            <img src="images/client-2.jpg" alt="Клиент Сергей Л." />
+            <img src="images/client-2.jpg" alt="Клиент Сергей Л.">
             <div>
+              <h3 class="visually-hidden">Отзыв Сергея Л.</h3>
               <p>«Заказывали монтаж кровли. Ребята рассчитали материалы, доставили и смонтировали за неделю. Рекомендую!»</p>
               <span class="review-card__meta">Сергей Л., 25.03.2024</span>
             </div>
@@ -206,8 +213,9 @@
         </div>
         <div class="carousel-item">
           <article class="review-card">
-            <img src="images/client-3.jpg" alt="Клиент Мария Д." />
+            <img src="images/client-3.jpg" alt="Клиент Мария Д.">
             <div>
+              <h3 class="visually-hidden">Отзыв Марии Д.</h3>
               <p>«Понравился подход: постоянная обратная связь, фотоотчёты и помощь с подбором материалов под бюджет.»</p>
               <span class="review-card__meta">Мария Д., 08.01.2024</span>
             </div>
@@ -236,7 +244,12 @@
         </ul>
         <a href="#order" class="btn btn-outline-primary contacts__cta">Заказать звонок</a>
       </div>
-      <div class="map-widget" "position:relative;overflow:hidden;"><a href="https://yandex.ru/maps/66/omsk/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Омск</a><a href="https://yandex.ru/maps/66/omsk/house/ulitsa_lukashevicha_15b/Y0oYdABmSkAOQFtufXV4dXlkbQ==/?ll=73.276016%2C54.994605&utm_medium=mapframe&utm_source=maps&z=19.76" style="color:#eee;font-size:12px;position:absolute;top:14px;">Улица Лукашевича, 15Б — Яндекс Карты</a><iframe src="https://yandex.ru/map-widget/v1/?ll=73.276016%2C54.994605&mode=whatshere&whatshere%5Bpoint%5D=73.276035%2C54.994702&whatshere%5Bzoom%5D=17&z=19.76" width="560" height="400" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe></div>
+      <div class="map-widget" style="position:relative;overflow:hidden;">
+        <a href="https://yandex.ru/maps/66/omsk/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Омск</a>
+        <a href="https://yandex.ru/maps/66/omsk/house/ulitsa_lukashevicha_15b/Y0oYdABmSkAOQFtufXV4dXlkbQ==/?ll=73.276016%2C54.994605&utm_medium=mapframe&utm_source=maps&z=19.76" style="color:#eee;font-size:12px;position:absolute;top:14px;">Улица Лукашевича, 15Б — Яндекс Карты</a>
+        <iframe src="https://yandex.ru/map-widget/v1/?ll=73.276016%2C54.994605&mode=whatshere&whatshere%5Bpoint%5D=73.276035%2C54.994702&whatshere%5Bzoom%5D=17&z=19.76" width="560" height="400" style="position:relative;" allowfullscreen></iframe>
+      </div>
+    </div>
   </section>
 
   <footer class="footer">
@@ -259,5 +272,17 @@
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"
   ></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const menu = document.querySelector(".menu");
+      const toggle = document.querySelector(".menu__toggle");
+      if (!menu || !toggle) return;
+
+      toggle.addEventListener("click", () => {
+        const isOpen = menu.classList.toggle("menu--open");
+        toggle.setAttribute("aria-expanded", String(isOpen));
+      });
+    });
+  </script>
 </body>
 </html>
